@@ -1,0 +1,1 @@
+﻿Tạo 1 chương trình quản lý ô tô: dựng 1 class Car có các thuộc tính phù hợp (Color, Year, Brand, Mileage,...). Trong class Car cần khởi tạo các constructors khác nhau nhận tham số đầu vào khi khởi tạo đối tượng khác nhau. Ngoài ra, tạo biến và phương thức static để có thể kiểm tra số lượng đối tượng ô tô được tạo ra. 

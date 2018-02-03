@@ -1,0 +1,21 @@
+1.B
+2.A
+3.C
+4.A
+5.D
+6.C
+7.C
+8.A
+9.Không đáp án nào đúng: /n
+Kết quả của 2 dòng code: /n
+List<int> numbers = new List<int>() {100, 7, 23, 4, 9, 0}; /n
+var a = numbers.Find(item => item%2 == 0); /n
+=> a sẽ có giá trị 100 (Method Find trả về giá trị đầu tiên thỏa mãn điều kiện chia hết cho 2) /n
+=> câu lệnh foreach (var item in a) sẽ không chạy đc
+10.A
+11.C
+12.A
+13.A
+14.B
+15.A
+16.A

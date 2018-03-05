@@ -6,38 +6,38 @@
 
 ## VD: dotnet run /home/moe/Desktop/CSharpProject-master/treeapp/
 
+$ tree .
+.
 ├ folderA
-
 │ ├ folderAA
-
 │ │ ├ Foo
-
 │ │ │ ├ manual.txt
-
 │ │ ├ rock.js
-
 │ │ ├ foo.js
-
 │ ├ something.txt
-
 │ ├ anotherfile.dart
-
 ├ folderB
-
 │ ├ delete.cs
-
 │ ├ add.cs
-
 ├ amend.cs
-
 ├ hello.csproj
-
 ├ file.cs
-
 ├ ReadMe.md
 
 ### Sơ lược thuật toán
 
-1. Khởi đầu với thư mục gốc mà người dùng cung cấp
+### Chú thích
 
-![folder gốc](https://www.lucidchart.com/publicSegments/view/71c8e7e0-e774-4b22-b66e-b637df57b103/image.jpeg)
+Tên folder in hoa, tên file viết thường
+
+Sau tên file, folder là số chỉ cấp độ
+
+VD: A/0 là folder A cấp độ 0, b/1 là file b cấp độ 1
+
+1. Khởi đầu với folder gốc A/0 mà người dùng cung cấp
+
+![A/0](https://www.lucidchart.com/publicSegments/view/6ff4bb20-5300-4d33-b55a-d39de455228a/image.png)
+
+2. Chọc vào A/0, lấy ra các file và folder con, sau đó chèn vào tại vị trí ngay đằng sau folder vừa chọc vào (A/0)
+
+![A/0, B/1, C/1,d/1](https://www.lucidchart.com/publicSegments/view/35e08fc3-4589-4dfe-9b26-1de4f1139aea/image.png)

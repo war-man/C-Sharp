@@ -83,16 +83,24 @@ namespace TreeView
 
         static void Main(string[] args)
         {
-            string folderName = args[0];
-            var list = GetAllFilesAndDir(folderName);
-            string result = list[0].Path + "\r\n";
-
-            for (int i = 1; i < list.Count; i++)
+            try
             {
-                result += Draw(list[i]);
+                string folderName = args[0];
+                var list = GetAllFilesAndDir(folderName);
+                string result = list[0].Path + "\r\n";
+
+                for (int i = 1; i < list.Count; i++)
+                {
+                    result += Draw(list[i]);
+                }
+
+                Console.WriteLine(result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
 
-            Console.WriteLine(result);
         }
     }
 }

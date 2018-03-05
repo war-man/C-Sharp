@@ -2,8 +2,9 @@
 
 ## Nhập vào đường dẫn đến 1 thư mục bất kỳ --> chương trình sẽ vẽ ra sơ đồ cây chi tiết cấu trúc của thư mục đó,bao gồm tất cả các file và thư mục con bên trong
 
-Cú pháp chạy chương trình: dotnet run [đường dẫn đến thư mục]
-VD: dotnet run /home/moe/Desktop/TreeView
+## Cú pháp chạy chương trình: dotnet run [đường dẫn đến thư mục]
+
+## VD: dotnet run /home/moe/Desktop/TreeView
 
 Thuật toán của chương trình:
 
@@ -32,16 +33,25 @@ Method này có nhiệm vụ chọc vào 1 folder và lấy ra các folder con v
 - Việc thực hiện phép kiểm tra như trên đảm bảo cho List sẽ ko được liên tục thêm phần tử vào, do đó vòng lặp sẽ ko chạy vô tận
 - Các lần chạy vòng lặp tiếp theo diễn ra tương tự.
 
-VD: Chọc vào A/0, lấy ra được 2 thư mục B/1, C/1 và file e/1 --> List: (A/0, B/1, C/1, e/1)
-Chọc vào B/1, thư mục B/1 chứa 2 file f/2 và g/2 --> f/2 và g/2 được thêm vào ngay đằng sau B/1
---> List: (A/0, B/1, f/2, g/2, C/1, e/1)
-Chọc vào f/2, do f/2 là file nên ko làm gì cả. List vẫn thế
-Tương tự với g/2
-Chọc vào C/1, C/1 chứa folder H/2 và file i/2 --> List: (A/0, B/1, f/2, g/2, C/1, H/2, i/2, e/1)
-Chọc vào H/2, H/2 chứa folder K/3 --> List: (A/0, B/1, f/2, g/2, C/1, H/2, K/3, i/2, e/1)
-Chọc vào K/3, K/3 là folder rỗng --> List ko có gì thay đổi
-Chọc vào i/2 và e/1, đây là 2 file --> List ko có gì thay đổi --> Kết thúc vòng lặp
---> Cấu trúc folder A/0 hoàn chỉnh: (A/0, B/1, f/2, g/2, C/1, H/2, K/3, i/2, e/1)
+### VD: Chọc vào A/0, lấy ra được 2 thư mục B/1, C/1 và file e/1 --> List: (A/0, B/1, C/1, e/1)
+
+### Chọc vào B/1, thư mục B/1 chứa 2 file f/2 và g/2 --> f/2 và g/2 được thêm vào ngay đằng sau B/1
+
+### --> List: (A/0, B/1, f/2, g/2, C/1, e/1)
+
+### Chọc vào f/2, do f/2 là file nên ko làm gì cả. List vẫn thế
+
+### Tương tự với g/2
+
+### Chọc vào C/1, C/1 chứa folder H/2 và file i/2 --> List: (A/0, B/1, f/2, g/2, C/1, H/2, i/2, e/1)
+
+### Chọc vào H/2, H/2 chứa folder K/3 --> List: (A/0, B/1, f/2, g/2, C/1, H/2, K/3, i/2, e/1)
+
+### Chọc vào K/3, K/3 là folder rỗng --> List ko có gì thay đổi
+
+### Chọc vào i/2 và e/1, đây là 2 file --> List ko có gì thay đổi --> Kết thúc vòng lặp
+
+### --> Cấu trúc folder A/0 hoàn chỉnh: (A/0, B/1, f/2, g/2, C/1, H/2, K/3, i/2, e/1)
 
 - Sau khi lấy được List cấu trúc folder hoàn chỉnh, ta tiến hành chỉnh sửa lại tên đường dẫn:
     + Với folder gốc, ta giữ nguyên tên đường dẫn đầy đủ

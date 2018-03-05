@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TreeView
 {
@@ -16,27 +17,6 @@ namespace TreeView
     }
     class Program
     {
-        // public static string Draw(string path)
-        // {
-        //     string originalPath = path;
-        //     string[] subfolder = Directory.GetDirectories(originalPath);
-
-        //     path += "\r\n" + "└── " + subfolder[0];
-
-        //     for (int i = 1; i < subfolder.Length; i++)
-        //     {
-        //         path += "\r\n" + "└── " + subfolder[i];
-        //     }
-
-        //     string[] file = Directory.GetFiles(originalPath);
-        //     for (int i = 0; i < file.Length; i++)
-        //     {
-        //         path += "\r\n" + "└── " + file[i];
-        //     }
-
-        //     return path;
-        // }
-
         public static List<Info> GetFilesAndDirInOneFolder(string path, int level)
         {
             List<Info> result = new List<Info>();
@@ -72,20 +52,31 @@ namespace TreeView
 
             }
 
+            for (int i = 1; i<result.Count; i++)
+            {
+                var slashPosition = result[i].Path.LastIndexOf("/");
+                result[i].Path = result[i].Path.Substring(slashPosition+1);
+            }
+
             return result;
         }
 
-
+        public static string Draw (Info item)
+        {
+            return String.Concat(Enumerable.Repeat("│ ", item.Level-1)) + "├ " + item.Path + "\r\n";
+        }
 
         static void Main(string[] args)
         {
-            var list = GetAllFilesAndDir("/home/moe/Desktop/CSharpProject-master/treeapp");
+            string folderName = args[0];
+            var list = GetAllFilesAndDir(folderName);
             string result = list[0].Path + "\r\n";
 
             for (int i = 1; i < list.Count; i++)
             {
-                result += new string(' ', list[i].Level) + list[i].Level + new string('-', 1) + list[i].Path + "\r\n";
+                result += Draw(list[i]);
             }
+
             Console.WriteLine(result);
         }
     }

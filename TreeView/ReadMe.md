@@ -38,7 +38,7 @@ Những file và folder cùng cấp độ sẽ được tô cùng màu
 
 1. Khởi đầu với folder gốc A/0 mà người dùng cung cấp
 
-![A/0](https://www.lucidchart.com/publicSegments/view/6ff4bb20-5300-4d33-b55a-d39de455228a/image.png)
+![A/0](https://www.lucidchart.com/publicSegments/view/2e5ad8c6-bed5-46a1-be59-03d5f2415f2d/image.png)
 
 2. Chọc vào A/0
 
@@ -49,4 +49,4 @@ Tiến hành check:
     * Nếu folder rỗng: Ko làm gì cả
     * Folder ko rỗng: Lấy các file và folder trong A/0, chèn bọn nó vào vị trí ngay đằng sau folder vừa chọc vào (A/0)
 
-![A/0, B/1, C/1,d/1](https://www.lucidchart.com/publicSegments/view/35e08fc3-4589-4dfe-9b26-1de4f1139aea/image.png)
+![A/0, B/1, C/1,d/1](https://www.lucidchart.com/publicSegments/view/adf46747-7f04-462b-8d34-37ecbcb28abe/image.png)

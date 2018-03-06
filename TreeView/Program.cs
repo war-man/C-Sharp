@@ -86,6 +86,18 @@ namespace TreeView
             try
             {
                 string folderName = args[0];
+                
+                if (args[0] == ".")
+                {
+                    folderName = Directory.GetCurrentDirectory();
+                } else if (args[0] == "..")
+                {
+                    folderName = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
+                } else if (args[0] == "~")
+                {
+                    folderName = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                }
+
                 var list = GetAllFilesAndDir(folderName);
                 string result = list[0].Path + "\r\n";
 

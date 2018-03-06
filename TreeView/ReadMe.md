@@ -55,4 +55,4 @@ Thao tác check này đảm bảo List chỉ được thêm phần tử vào khi
 
 3. Lặp lại thao tác check với các item B/1, C/1, d/1
 
-![A/0, B/1,E/2,f/2, C/1, g/2, d/1]("./Blank Diagram.jpeg")
+![A/0, B/1,E/2,f/2, C/1, g/2, d/1](https://github.com/handuy/C-Sharp/blob/master/TreeView/Blank%20Diagram.jpeg)

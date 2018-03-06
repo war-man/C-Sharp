@@ -56,3 +56,5 @@ Thao tác check này đảm bảo List chỉ được thêm phần tử vào khi
 3. Lặp lại thao tác check với các item B/1, C/1, d/1
 
 ![A/0, B/1,E/2,f/2, C/1, g/2, d/1](https://github.com/handuy/C-Sharp/blob/master/TreeView/Blank%20Diagram.jpeg)
+
+4. Sau khi có được một List phản ánh chính xác cấu trúc thư mục, tiến hành chạy vòng lặp for qua từng phần tử của List để nối các phần tử lại với nhau bằng các kí tự │ và ├

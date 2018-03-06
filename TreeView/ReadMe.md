@@ -55,4 +55,4 @@ Thao tác check này đảm bảo List chỉ được thêm phần tử vào khi
 
 3. Lặp lại thao tác check với các item B/1, C/1, d/1
 
-![A/0, B/1,E/2,f/2, C/1, g/2, d/1](https://www.lucidchart.com/publicSegments/view/2e5ad8c6-bed5-46a1-be59-03d5f2415f2d/image.png)
+![A/0, B/1,E/2,f/2, C/1, g/2, d/1]("./Blank Diagram.jpeg")
